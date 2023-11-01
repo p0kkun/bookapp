@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Book;
 
+
 class BooksculumnseSeeder extends Seeder
 {
     /**

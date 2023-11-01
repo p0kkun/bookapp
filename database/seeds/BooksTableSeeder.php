@@ -45,7 +45,6 @@ class BooksTableSeeder extends Seeder
             ['title' => 'キングダム', 'author' => '原泰久', 'price' => rand(100, 2000)],
             ['title' => 'スラムダンク', 'author' => '井上雄彦', 'price' => rand(100, 2000)]
         ];
-        
 
         foreach ($books as $book) {
             Book::create($book);
