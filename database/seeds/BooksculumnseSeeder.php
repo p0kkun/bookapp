@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use App\Book;
 
-class BooksTableSeeder extends Seeder
+class BooksculumnseSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
-    protected $guarded =array('id');
+    protected $guarded =[];
     
     public static $rules=array(
         'title' => 'required',
