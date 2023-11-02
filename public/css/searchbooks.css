@@ -1,0 +1,129 @@
+.search-group {
+    position: relative; 
+    margin-bottom: 15px;
+    display: flex;        /* 追加: search-groupをflexboxに */
+    flex-direction: column;  /* 追加: エラーメッセージを入力フィールドの下に配置 */
+}
+.searchBook {
+    display: flex;
+    align-items: flex-start;  /* 入力フィールドの上端を基準にしてアイテムを揃える */
+    flex-direction: row;      /* 入力フィールドを横方向に並べる */
+    gap: 10px; 
+    margin-top: 10px; 
+}
+.search-with-error {
+    border-color: red;
+}
+
+.searcherror {
+    display: block; 
+    color: red; 
+    margin-top: 5px; /* 追加: エラーメッセージを入力フィールドから少し離す */
+}
+.search {
+    padding: 10px 15px;
+    background-color: #2a0dcf;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10%;
+}
+.search:hover {
+    background-color: #331fa3;
+}
+.searchform {
+    margin: 0 0 30px 15px;
+    padding-bottom: 20px;
+}
+.searchtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+.searcharea {
+    margin-bottom: 30px;
+}
+.searchbookview {
+    margin-top: 50px;
+}
+.nothing{
+    font-size: 50px;
+    z-index: 9999;
+    margin: 100px;
+}
+
+/* 全体的なスタイリング */
+.search-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+/* 価格入力ボックスのスタイル */
+.search-group input[type="number"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border 0.3s;
+}
+
+/* エラー時の価格入力ボックスのスタイル */
+.search-group input[type="number"].search-with-error {
+    border-color: red;
+    outline-color: red;
+}
+
+/* ドロップダウンメニューのスタイル */
+.search-group select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* エラーメッセージのスタイル */
+.searcherror {
+    color: red;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+
+.reset-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.reset-button:hover::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.5) url('/images/sparkle.png') repeat;
+    animation: sparkle 1.5s infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        background-position: -200% -200%;
+    }
+    50% {
+        background-position: 200% 200%;
+    }
+    100% {
+        background-position: -200% -200%;
+    }
+}
